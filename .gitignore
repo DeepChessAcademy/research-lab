@@ -1,0 +1,31 @@
+# Ambiente Virtual do Python
+# Nunca envie sua pasta 'venv' para o GitHub
+venv/
+
+# Pasta de Dados
+# NUNCA envie dados brutos ou processados para o repositório.
+# O Lichess PGN tem gigabytes!
+data/
+
+# Arquivos de log e saídas temporárias
+# (Isso pegará o 'log.txt' que criamos e outros futuros)
+*.log
+log.txt
+
+# Cache do Python e arquivos compilados
+__pycache__/
+*.pyc
+
+# Arquivos do Apache Beam
+# (Ignora as saídas do pipeline se não estiverem na pasta 'data')
+pipeline_output*
+
+# Configurações de IDE e Sistema
+.vscode/
+.idea/
+.DS_Store
+
+# Artefatos de Teste e QA
+.pytest_cache/
+.coverage
+htmlcov/

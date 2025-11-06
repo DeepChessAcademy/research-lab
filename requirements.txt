@@ -1,0 +1,6 @@
+# requirements.txt
+pandas
+python-chess
+apache-beam
+pytest
+pytest-cov
