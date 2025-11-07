@@ -43,7 +43,7 @@ def run_pipeline():
          | 'Start' >> beam.Create([INPUT_FILE])
          
          # Aplica nosso "operário" ParsePgnFile (importado do parser.py)
-         | 'Parse Games' >> beam.FlatMap(ParsePgnFile())
+         | 'Parse Games' >> beam.ParDo(ParsePgnFile())
          
          # Converte o dicionário para uma string CSV
          | 'Format to CSV' >> beam.Map(lambda x: f"{x['resultado']},{x['rating_brancas']},{x['rating_pretas']},{x['total_lances']}")
@@ -57,4 +57,5 @@ def run_pipeline():
 
 # --- Ponto de Entrada do Script ---
 if __name__ == '__main__':
+
     run_pipeline()
