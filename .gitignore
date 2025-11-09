@@ -1,15 +1,10 @@
 # Ambiente Virtual do Python
-# Nunca envie sua pasta 'venv' para o GitHub
 venv/
 
 # Pasta de Dados
-# NUNCA envie dados brutos ou processados para o repositório.
-# O Lichess PGN tem gigabytes!
 data/
 
 # Arquivos de log e saídas temporárias
-# (Isso pegará o 'log.txt' que criamos e outros futuros)
-*.log
 log.txt
 
 # Cache do Python e arquivos compilados
@@ -29,3 +24,10 @@ pipeline_output*
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Ignora a pasta de modelos
+/models/
+
+# Ignora ficheiros de modelo individuais
+*.joblib
+*.pkl
